@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP-Autonomo", "WindowsFormsApp1\ERP-Autonomo.csproj", "{CD7A941E-CEAD-4555-A8E8-7034090F6685}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ERP-Autonomos", "ERP-Autonomos\ERP-Autonomos.vdproj", "{BB6AB0A7-F558-4E6F-9A04-EA799D037C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestERP", "UnitTestERP\UnitTestERP.csproj", "{067EE199-A1ED-4ADB-83E7-8DD71A1BFE67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD7A941E-CEAD-4555-A8E8-7034090F6685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7A941E-CEAD-4555-A8E8-7034090F6685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7A941E-CEAD-4555-A8E8-7034090F6685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7A941E-CEAD-4555-A8E8-7034090F6685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB6AB0A7-F558-4E6F-9A04-EA799D037C7C}.Debug|Any CPU.ActiveCfg = Debug
+		{BB6AB0A7-F558-4E6F-9A04-EA799D037C7C}.Release|Any CPU.ActiveCfg = Release
+		{067EE199-A1ED-4ADB-83E7-8DD71A1BFE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067EE199-A1ED-4ADB-83E7-8DD71A1BFE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067EE199-A1ED-4ADB-83E7-8DD71A1BFE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067EE199-A1ED-4ADB-83E7-8DD71A1BFE67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D40BFEF8-976A-4E77-AF4C-40CC77835CCF}
+	EndGlobalSection
+EndGlobal

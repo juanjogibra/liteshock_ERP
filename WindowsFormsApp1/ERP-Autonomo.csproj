@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD7A941E-CEAD-4555-A8E8-7034090F6685}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>bin\Debug\WindowsFormsApp1.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alarmaComponente">
+      <HintPath>..\..\alarmaComponente\alarmaComponente\bin\Debug\alarmaComponente.dll</HintPath>
+    </Reference>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\..\..\..\Desktop\proyecto interfaces gestion empresarial\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Albaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Albaran.Designer.cs">
+      <DependentUpon>Albaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFacturasTotales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacturasTotales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="impuestos.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetVentasTotales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentasTotales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="erpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>erpDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="erpDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>erpDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="erpDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>erpDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="erpDataSetFeb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>erpDataSetFeb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioClientes.Designer.cs">
+      <DependentUpon>FormularioClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtiles.Designer.cs">
+      <DependentUpon>FormUtiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infoClientes.Designer.cs">
+      <DependentUpon>infoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeClientes.Designer.cs">
+      <DependentUpon>InformeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeFacturas.Designer.cs">
+      <DependentUpon>InformeFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informescs.Designer.cs">
+      <DependentUpon>Informescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesTodasFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesTodasFacturas.Designer.cs">
+      <DependentUpon>InformesTodasFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdfView.Designer.cs">
+      <DependentUpon>PdfView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VentasTotales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasTotales.Designer.cs">
+      <DependentUpon>VentasTotales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Albaran.resx">
+      <DependentUpon>Albaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioClientes.resx">
+      <DependentUpon>FormularioClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtiles.resx">
+      <DependentUpon>FormUtiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infoClientes.resx">
+      <DependentUpon>infoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeClientes.resx">
+      <DependentUpon>InformeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeFacturas.resx">
+      <DependentUpon>InformeFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informescs.resx">
+      <DependentUpon>Informescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesTodasFacturas.resx">
+      <DependentUpon>InformesTodasFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdfView.resx">
+      <DependentUpon>PdfView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="ReporteFacturas.rdlc" />
+    <EmbeddedResource Include="ReportFacTotales.rdlc" />
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasTotales.resx">
+      <DependentUpon>VentasTotales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacturasTotales.xsc">
+      <DependentUpon>DataSetFacturasTotales.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacturasTotales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacturasTotales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFacturasTotales.xss">
+      <DependentUpon>DataSetFacturasTotales.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasTotales.xsc">
+      <DependentUpon>DataSetVentasTotales.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetVentasTotales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentasTotales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetVentasTotales.xss">
+      <DependentUpon>DataSetVentasTotales.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet.xsc">
+      <DependentUpon>erpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>erpDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="erpDataSet.xss">
+      <DependentUpon>erpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet1.xsc">
+      <DependentUpon>erpDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>erpDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="erpDataSet1.xss">
+      <DependentUpon>erpDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet2.xsc">
+      <DependentUpon>erpDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>erpDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="erpDataSet2.xss">
+      <DependentUpon>erpDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSetFeb.xsc">
+      <DependentUpon>erpDataSetFeb.xsd</DependentUpon>
+    </None>
+    <None Include="erpDataSetFeb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>erpDataSetFeb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="erpDataSetFeb.xss">
+      <DependentUpon>erpDataSetFeb.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="usuarios.xsc">
+      <DependentUpon>usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="usuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usuarios.xss">
+      <DependentUpon>usuarios.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxPDFViewerLib">
+      <Guid>{49BEA983-661F-4F32-8793-E638A91989AF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="PDFViewerLib">
+      <Guid>{49BEA983-661F-4F32-8793-E638A91989AF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>
